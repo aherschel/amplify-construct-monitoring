@@ -1,0 +1,29 @@
+{
+  "name": "amplify-construct-monitoring",
+  "version": "0.1.0",
+  "bin": {
+    "amplify-construct-monitoring": "bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.129",
+    "@types/node": "20.5.9",
+    "aws-cdk": "2.110.1",
+    "esbuild": "^0.19.7",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.2.2"
+  },
+  "dependencies": {
+    "@aws-amplify/data-schema": "^0.12.9",
+    "@aws-amplify/graphql-api-construct": "^1.4.3",
+    "aws-cdk-lib": "2.110.1",
+    "cdk-monitoring-constructs": "^6.5.1",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
