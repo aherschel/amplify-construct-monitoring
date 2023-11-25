@@ -2,6 +2,7 @@ import { generateClient } from 'aws-amplify/api';
 import type { Schema } from '../iac/schema';
 import { Flex, Heading, Button, Input } from '@aws-amplify/ui-react';
 import { useState } from 'react';
+import { Echo, Reverse } from './graphql/queries';
 
 const client = generateClient<Schema>();
 
@@ -15,10 +16,22 @@ function App() {
 
   const echoMessage = async (): Promise<void> => {
     if (message === '') return;
-    // const echoResponse = await client.graphql({});
+    const echoResponse = await client.graphql({
+      query: Echo,
+      variables: { message },
+    });
+    if (echoResponse.errors) console.warn(`Got echo errors: ${JSON.stringify(echoResponse.errors)}`);
+    console.log(`Got echo response: ${echoResponse.data.Echo?.echoedMessage}`);
   };
+
   const reverseMessage = async (): Promise<void> => {
     if (message === '') return;
+    const reverseResponse = await client.graphql({
+      query: Reverse,
+      variables: { message },
+    });
+    if (reverseResponse.errors) console.warn(`Got reverse errors: ${JSON.stringify(reverseResponse.errors)}`);
+    console.log(`Got reverse response: ${reverseResponse.data.Reverse?.reversedMessage}`);
   };
 
   return (

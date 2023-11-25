@@ -7,7 +7,7 @@
     "test": "echo \"No Tests\"",
     "eject": "react-scripts eject",
     "synth": "cdk synth",
-    "deploy": "cdk deploy && amplify generate config --stack MonitoringTestStack --out-dir src --format ts"
+    "deploy": "cdk deploy && amplify generate config --stack MonitoringTestStack --out-dir src --format ts && amplify generate graphql-client-code --format graphql-codegen --statement-target typescript --stack MonitoringTestStack --out src/graphql"
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^6.0.3",
