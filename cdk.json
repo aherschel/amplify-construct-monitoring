@@ -1,8 +1,8 @@
 {
-  "app": "npx ts-node --prefer-ts-exts src/app.ts",
+  "app": "npx ts-node --project tsconfig-iac.json --prefer-ts-exts iac/app.ts",
   "watch": {
     "include": [
-      "**"
+      "iac/**"
     ],
     "exclude": [
       "README.md",

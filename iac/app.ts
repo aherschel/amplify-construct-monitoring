@@ -24,7 +24,7 @@ const auth = new AmplifyAuth(stack, 'MonitoringTestAuth', {
 const data = new AmplifyData(stack, 'MonitoringTestApi', {
   definition: AmplifyDataDefinition.fromString(schema.transform().schema),
   authorizationModes: {
-    defaultAuthorizationMode: 'AMAZON_COGNITO_USER_POOLS',
+    defaultAuthorizationMode: 'AWS_IAM',
     userPoolConfig: { userPool: auth.resources.userPool },
     iamConfig: {
       identityPoolId: auth.resources.cfnResources.cfnIdentityPool.ref,

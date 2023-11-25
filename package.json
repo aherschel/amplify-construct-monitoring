@@ -1,31 +1,55 @@
 {
   "name": "amplify-construct-monitoring",
   "version": "0.1.0",
-  "bin": {
-    "amplify-construct-monitoring": "bin/app.js"
-  },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
-    "cdk": "cdk"
-  },
-  "devDependencies": {
-
-    "@types/aws-lambda": "^8.10.129",
-    "@types/node": "20.5.9",
-    "aws-cdk": "2.110.1",
-    "esbuild": "^0.19.7",
-    "ts-node": "^10.9.1",
-    "typescript": "~5.2.2"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"No Tests\"",
+    "eject": "react-scripts eject",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy && amplify generate config --stack MonitoringTestStack --out-dir src --format ts"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^6.0.3",
+    "aws-amplify": "^6.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
     "@aws-amplify/auth-construct-alpha": "^0.4.2",
+    "@aws-amplify/backend-cli": "^0.9.1",
     "@aws-amplify/data-construct": "^1.4.3",
     "@aws-amplify/data-schema": "^0.12.9",
+    "@types/aws-lambda": "^8.10.129",
+    "@types/node": "20.5.9",
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
+    "aws-cdk": "2.110.1",
     "aws-cdk-lib": "2.110.1",
     "cdk-monitoring-constructs": "^6.5.1",
     "constructs": "^10.0.0",
-    "source-map-support": "^0.5.21"
+    "esbuild": "^0.19.7",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.2.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
