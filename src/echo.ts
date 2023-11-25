@@ -1,5 +1,5 @@
 import type { AppSyncResolverEvent } from '@types/aws-lambda';
-import type { EchoArguments, EchoResponse } from './app';
+import type { EchoArguments, EchoResponse } from './schema';
 
 /**
  * Echo the message back to the caller.

@@ -11,6 +11,7 @@
     "cdk": "cdk"
   },
   "devDependencies": {
+
     "@types/aws-lambda": "^8.10.129",
     "@types/node": "20.5.9",
     "aws-cdk": "2.110.1",
@@ -19,8 +20,9 @@
     "typescript": "~5.2.2"
   },
   "dependencies": {
+    "@aws-amplify/auth-construct-alpha": "^0.4.2",
+    "@aws-amplify/data-construct": "^1.4.3",
     "@aws-amplify/data-schema": "^0.12.9",
-    "@aws-amplify/graphql-api-construct": "^1.4.3",
     "aws-cdk-lib": "2.110.1",
     "cdk-monitoring-constructs": "^6.5.1",
     "constructs": "^10.0.0",

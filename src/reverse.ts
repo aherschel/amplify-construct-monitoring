@@ -1,5 +1,5 @@
 import type { AppSyncResolverEvent } from '@types/aws-lambda';
-import type { ReverseArguments, ReverseResponse } from './app';
+import type { ReverseArguments, ReverseResponse } from './schema';
 
 /**
  * Reverse the message back to the caller.
