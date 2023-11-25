@@ -1,4 +1,4 @@
-import type { AppSyncResolverEvent } from '@types/aws-lambda';
+import type { AppSyncResolverEvent } from 'aws-lambda';
 import type { EchoArguments, EchoResponse } from './schema';
 
 /**

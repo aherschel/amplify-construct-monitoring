@@ -1,4 +1,4 @@
-import type { AppSyncResolverEvent } from '@types/aws-lambda';
+import type { AppSyncResolverEvent } from 'aws-lambda';
 import type { ReverseArguments, ReverseResponse } from './schema';
 
 /**
@@ -6,5 +6,5 @@ import type { ReverseArguments, ReverseResponse } from './schema';
  * @param event the event from appsync, using generated client types
  */
 export const handler = async (event: AppSyncResolverEvent<ReverseArguments>): Promise<ReverseResponse> => ({
-  reversedMessage: "Wait I'm not reversed",
+  reversedMessage: event.arguments.message.split('').reverse().join(''),
 });
