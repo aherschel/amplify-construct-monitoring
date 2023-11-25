@@ -1,5 +1,15 @@
 N.B. You'll need to run `npm i --force` due to peer dep issues in the cdk monitoring construct.
 
+Playing around with 2 things in this repo.
+
+1) Adding a small monitoring construct that makes it simple to pass in amplify constructs and get basic dashboards on top of that.
+2) Example of using a slight variation of the recommended schema structure to get request/response types in lambda functions invoked via an Appsync api.
+
+Example dashboard
+
+![](readme-images/Screenshot 2023-11-24 at 21-12-42 CloudWatch us-west-2.png)
+![](readme-images/Screenshot 2023-11-24 at 21-13-13 CloudWatch us-west-2.png)
+
 # Welcome to your CDK TypeScript project
 
 This is a blank project for CDK development with TypeScript.
