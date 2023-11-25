@@ -7,8 +7,8 @@ Playing around with 2 things in this repo.
 
 Example dashboard
 
-![](readme-images/Screenshot 2023-11-24 at 21-12-42 CloudWatch us-west-2.png)
-![](readme-images/Screenshot 2023-11-24 at 21-13-13 CloudWatch us-west-2.png)
+![screenshot-1](https://github.com/aherschel/amplify-construct-monitoring/blob/main/readme-images/Screenshot%202023-11-24%20at%2021-12-42%20CloudWatch%20us-west-2.png?raw=true)
+![screenshot-2](https://github.com/aherschel/amplify-construct-monitoring/blob/main/readme-images/Screenshot%202023-11-24%20at%2021-13-13%20CloudWatch%20us-west-2.png?raw=true)
 
 # Welcome to your CDK TypeScript project
 
