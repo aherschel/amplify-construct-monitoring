@@ -1,3 +1,5 @@
+N.B. You'll need to run `npm i --force` due to peer dep issues in the cdk monitoring construct.
+
 # Welcome to your CDK TypeScript project
 
 This is a blank project for CDK development with TypeScript.
