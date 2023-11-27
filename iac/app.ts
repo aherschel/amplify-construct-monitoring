@@ -41,7 +41,6 @@ const data = new AmplifyData(stack, 'MonitoringTestApi', {
 
 new AmplifyMonitoring(stack, 'Monitoring', {
   data,
-  auth,
   additionalResources: {
     functions: [echoFn, reverseFn],
   },

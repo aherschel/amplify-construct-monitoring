@@ -2,7 +2,6 @@ import { AmplifyData } from '@aws-amplify/data-construct';
 import { IFunction } from 'aws-cdk-lib/aws-lambda';
 import { Construct } from 'constructs';
 import { MonitoringFacade } from 'cdk-monitoring-constructs';
-import { AmplifyAuth } from '@aws-amplify/auth-construct-alpha';
 
 export type AdditionalResources = {
   functions?: IFunction[];
@@ -10,7 +9,6 @@ export type AdditionalResources = {
 
 export type AmplifyMonitoringProps = {
   data?: AmplifyData;
-  auth?: AmplifyAuth;
   additionalResources?: AdditionalResources;
 };
 
@@ -24,7 +22,6 @@ export class AmplifyMonitoring extends Construct {
 
     this.monitoring.addMediumHeader('Amplify Backend');
     if (props.data) this.setupDataMonitoring(props.data);
-    if (props.auth) this.setupAuthMonitoring(props.auth);
     if (props.additionalResources) this.setupAdditionalResourceMonitoring(props.additionalResources);
   }
 
@@ -47,14 +44,6 @@ export class AmplifyMonitoring extends Construct {
     }));
   }
 
-  setupAuthMonitoring(auth: AmplifyAuth) {
-    this.monitoring.addMediumHeader('Auth Construct');
-    // auth.resources.userPool
-    // auth.resources.userPoolClient
-    // auth.resources.cfnResources.cfnIdentityPool
-    // auth.resources.cfnResources.cfnIdentityPoolRoleAttachment
-  }
-
   setupAdditionalResourceMonitoring(additionalResources: AdditionalResources) {
     const { functions } = additionalResources;
 
@@ -65,5 +54,4 @@ export class AmplifyMonitoring extends Construct {
       alarmFriendlyName: lambdaFunction.functionName,
     }));
   }
-
 }
